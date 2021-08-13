@@ -1,0 +1,406 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --main-brown-color: #B05045;
+    --hover-brown-color: #934239;
+    --dirty-white-background: #f3eed9;
+    --pale-text-color: #fff4ef;
+  }
+  
+  body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Gotham', sans-serif;
+  }
+  
+  #nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 75px;
+    width: 100%;
+    background-color: var(--main-brown-color);
+    z-index: 2;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .nav-link {
+    float: left;
+    padding: 28px 20px;
+    text-decoration: none;
+    color: var(--pale-text-color);
+  }
+  
+  .nav-link:hover {
+    background-color: var(--hover-brown-color);
+  }
+  
+  #header-img-link {
+    padding: 15px 20px;
+  }
+  
+  #header-img {
+    height: 100%;
+    width: auto;
+  }
+  
+  #title {
+    position: relative;
+    z-index: 1;
+    margin-top: 55px;
+    width: 100%;
+    padding: 250px;
+  }
+  
+  #title::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: var(--dirty-white-background);
+    background-image: url(../images/background-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+  }
+  
+  #title h1 {
+    font-size: 2.5em;
+    font-family: 'Coiny', 'Gotham', sans-serif;
+  }
+  
+  #description {
+    margin-top: -15px;
+    font-size: 1.1em;
+  }
+  
+  main {
+    margin: auto;
+    width: 70%;
+  }
+  
+  section {
+    margin: 80px 0;
+  }
+  
+  section h2 {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 40px;
+    color: var(--main-brown-color);
+  }
+  
+  section h2::before, section h2::after {
+    content: '';
+    border-top: 3px solid;
+  }
+  
+  .sample {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  
+  article {
+    margin-top: 10px;
+    width: 33%;
+  }
+  
+  article:hover {
+    background-color: var(--dirty-white-background);
+    cursor: pointer;
+  }
+  
+  article img {
+    height: 450px;
+    width: 330px;
+    padding-top: 20px;
+  }
+  
+  article p {
+    margin-top: 3px;
+  }
+  
+  .more-link {
+    float: right;
+    margin-top: 25px;
+    color: var(--hover-brown-color);
+  }
+  
+  iframe {
+    height: 320px;
+    width: 90%;
+    padding: 20px 0px;
+    border: none;
+  }
+  
+  .shop-article {
+    width: 50%;
+  }
+  
+  article[class=shop-article] img {
+    height: auto;
+    width: 450px;
+  }
+  
+  #form {
+    margin: auto;
+    height: auto;
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background: var(--dirty-white-background);
+    border-radius: 30px;
+    color: var(--main-brown-color);
+  }
+  
+  .form-text {
+    padding: 0 15px;
+  }
+  
+  #form p {
+    margin-top: -15px;
+  }
+  
+  #email {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+  }
+  
+  #submit {
+    margin: 15px;
+    padding: 5px 10px;
+    background-color: var(--main-brown-color);
+    border: 1px solid var(--main-brown-color);
+    border-radius: 10px;
+    color: var(--pale-text-color);
+    font-size: 0.9em;
+  }
+  
+  #submit:hover {
+    background-color: var(--hover-brown-color);
+    border: 1px solid var(--hover-brown-color);
+    cursor: pointer;
+  }
+  
+  footer {
+    margin: 35px;
+  }
+  
+  .separate {
+    margin: auto;
+    margin-bottom: 10px;
+    height: 1px;
+    width: 70%;
+    background-color: var(--main-brown-color);
+  }
+  
+  footer a {
+    margin: 50px;
+    text-decoration: none;
+    color: var(--main-brown-color);
+    font-weight: 600;
+  }
+  
+  #copyright {
+    color: var(--main-brown-color);
+  }
+  
+  @media (max-width: 576px)
+  {
+    #nav-bar {
+      height: 45px;
+    }
+    
+    .nav-link {
+      padding: 15px 8px;
+      font-size: 0.75em;
+    }
+    
+    #header-img {
+      display: none;
+    }
+    
+    #header-img-link::after {
+      content: "Home";
+    }
+    
+    #title {
+      margin-top: 30px;
+      width: 100%;
+      padding: 80px;
+    }
+    
+    #title h1 {
+      font-size: 1.5em;
+    }
+    
+    main {
+      width: 100%;
+    }
+    
+    section {
+      margin: 40px 0;
+    }
+    
+    article, .shop-article {
+      margin: auto;
+      width: 90%;
+    }
+  
+    article img, article[class=shop-article] img {
+      height: auto;
+      width: 80%;
+      max-width: 300px;
+    }
+    
+    .more-link {
+      float: none;
+      margin: 25px auto;
+    }
+    
+    #form h2 {
+      font-size: 1.2em;
+    }
+    
+    #form p {
+      font-size: 0.8em;
+    }
+    
+    #email {
+      width: 50%;
+    }
+  
+    .separate {
+      width: 100%;
+    }
+  
+    footer a {
+      display: block;
+      margin: 5px;
+    }
+  }
+  
+  @media (min-width: 576px) and (max-width: 900px)
+  {
+    #nav-bar {
+      height: 50px;
+    }
+    
+    .nav-link {
+      padding: 15px 15px;
+    }
+    
+    #header-img {
+      display: none;
+    }
+    
+    #header-img-link::after {
+      content: "Home";
+    }
+    
+    #title {
+      margin-top: 50px;
+      width: 100%;
+      padding: 120px;
+    }
+    
+    #title h1 {
+      font-size: 2em;
+    }
+    
+    main {
+      width: 80%;
+    }
+    
+    section {
+      margin: 40px 0;
+    }
+    
+    article, .shop-article {
+      margin: auto;
+      width: 80%;
+    }
+    
+    article img, article[class=shop-article] img {
+      height: auto;
+      width: 80%;
+      max-width: 350px;
+    }
+    
+    .more-link {
+      float: none;
+      margin: 25px auto;
+    }
+    
+    .separate {
+      width: 100%;
+    }
+  
+    footer a {
+      display: block;
+      margin: 10px;
+    }
+  }
+  
+  @media (min-width: 900px) and (max-width: 1500px)
+  {
+    #title {
+      margin-top: 75px;
+      width: 100%;
+      padding: 160px;
+    }
+    
+    main {
+      width: 80%;
+    }
+    
+    article {
+      margin-top: 10px;
+      width: 50%;
+    }
+  
+    article img, article[class=shop-article] img {
+      height: auto;
+      width: 80%;
+      max-width: 400px;
+    }
+    
+    #third-article {
+      display: none;
+    }
+    
+    #third-video {
+      display: none;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    
+    .separate {
+      width: 100%;
+    }
+    
+    .footer-links a {
+      margin: 10px 0;
+    }
+  }
